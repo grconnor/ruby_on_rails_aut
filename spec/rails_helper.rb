@@ -24,7 +24,7 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
 end
 
-Should::Matchers.configure do |config|
+Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
     with.library  :Rails
