@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'rails'
 
 RSpec.describe "Articles", type: :request do
 
@@ -8,5 +9,4 @@ RSpec.describe "Articles", type: :request do
       expect(response).to have_http_status(:success)
     end
   end
-
 end
