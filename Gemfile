@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   gem "pg", "~> 1.2"
   gem 'rspec-rails'
+  gem 'devise'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
   gem 'capybara'

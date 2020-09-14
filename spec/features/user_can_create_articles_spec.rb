@@ -2,8 +2,8 @@ feature 'User can create articles' do
   before do
     visit root_path
     click_on 'New Article'
-    fill_in 'Title', with:  'Happy holidays'
-    fill_in 'Content', with:  'Buy your gifts now!'
+    fill_in 'Title', with:  'Enjoy your birthday!'
+    fill_in 'Content', with:  'Congratz'
     click_on 'Create Article'
   end
 
@@ -13,22 +13,22 @@ feature 'User can create articles' do
     end
 
     it 'User should be on article show page' do
-      article = Article.find_by(title:  'Happy holidays')
+      article = Article.find_by(title:  'Enjoy your birthday!')
       expect(current_path).to eq article_path(article)
     end
 
     it 'User should see article title' do
-      expect(page).to have_content 'Happy holidays'
+      expect(page).to have_content 'Enjoy your birthday!'
     end
 
     it 'User should see article content' do
-      expect(page).to have_content 'Buy your gifts now!'
+      expect(page).to have_content 'Congratz'
     end
   end
 
   context "User doesn't enter a title for the article" do
     before do
-      fill_in 'Content', with:  'Buy your gifts now!'
+      fill_in 'Content', with:  'Congratz'
       click_on 'Create Article'
     end
 
