@@ -18,7 +18,6 @@ Bundler.require(*Rails.groups)
 module AutCycleAug
   class Application < Rails::Application
 
-    #Disable generation of helpers, javascript, CSS, and view, helper, routing and controller specs
 
     config.generators do |generate|
       generate.helper           false
